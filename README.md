@@ -5,7 +5,7 @@
 1. Clone my vimrc:
 
    ```
-   git clone git@github.com:rayshih/vimrc.git
+   git clone git@github.com:colorhaake/vimrc.git
    cd vimrc
    ln -s $(pwd)/vimrc ~/.vimrc
    ```
