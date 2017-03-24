@@ -42,6 +42,8 @@
 - [emmet-vim](https://github.com/mattn/emmet-vim): Emmet for vim (like zencoding)
 - [vim-snipmate](https://github.com/garbas/vim-snipmate): Snippets library
 - [vim-snippets](https://github.com/honza/vim-snippet): Snippets
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) A code-completion engine for Vim
+- [Tern](https://github.com/ternjs/tern_for_vim) Tern plugin for Vim
 
 ## Color Scheme
 
@@ -58,11 +60,55 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 ```
 
+## YouCompleteMe and Tern
+1. download `MacVim` dmg and install into Applications
+2. `ln -s /Applications/MacVim.app/Contents/bin/mvim vim`
+3. Install `YouCompleteMe` with `Vundle`. Add the following line into `vimrc` and run PluginIntall
+```
+  Plugin 'Valloric/YouCompleteMe'
+  Plugin 'marijnh/tern_for_vim'
+```
+4. `brew install cmake`
+5.
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --all
+```
+
+6. setting Tern
+```
+cd ~/.vim/bundle/tern_for_vim
+npm install
+touch .tern_project // at root of your project
+```
+
+add the following content into `.tern_proejct`
+```
+{
+
+  "libs": [
+
+    "browser",
+
+    "underscore",
+
+    "jquery"
+
+  ],
+
+  "plugins": {
+    "node": {}
+  }
+
+}
+```
+
+7. Done
+
 ## TODO
 
 - organize readme (plugins part)
 - fine tune line number
-- try YouCompleteMe
 - add solarized color scheme install guide for iterm2
 - add powerline font install guide <https://github.com/abertsch/Menlo-for-Powerline>
 - nerdtree and ctrlp integration
