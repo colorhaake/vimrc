@@ -39,6 +39,8 @@ Plugin 'lambdatoast/elm.vim'
 
 " Haskell
 Plugin 'neovimhaskell/haskell-vim'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Shougo/vimproc.vim'
 
 " PureScript
 Plugin 'raichoo/purescript-vim'
@@ -127,3 +129,9 @@ let g:jsx_ext_required = 0
 
 " flowtype
 let g:flow#autoclose = 1
+
+" disable bell
+set belloff=all
+
+" stack
+let $PATH .= (":" . $HOME . "/.stack/bin" . ":" . $HOME . "/.local/bin")

@@ -44,6 +44,8 @@
 - [vim-snippets](https://github.com/honza/vim-snippet): Snippets
 - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) A code-completion engine for Vim
 - [Tern](https://github.com/ternjs/tern_for_vim) Tern plugin for Vim
+- [ghcmod-vim](https://github.com/eagletmt/ghcmod-vim) ghc-mod
+- [vimproc.vim](https://github.com/Shougo/vimproc.vim) Interactive command execution in Vim (for ghcmod-vim)
 
 ## Color Scheme
 
@@ -104,6 +106,30 @@ add the following content into `.tern_proejct`
 ```
 
 7. Done
+
+## For Haskell
+
+### How to install eagletmt/ghcmod-vim by Vundle
+
+1. add `Plugin 'eagletmt/ghcmod-vim'` on your `~/.vimrc`
+
+2. install Shougo/vimproc.vim
+
+3. install DanielG/ghc-mod
+
+### How to install Shougo/vimproc.vim by Vundle
+
+1. add `Plugin 'Shougo/vimproc.vim'` on your `~/.vimrc`
+
+2. execute `:PluginInstall` on your vim
+
+3. `cd ~/.vim/bundle/vimproc.vim/` and `make`
+
+### How to install `DanielG/ghc-mod`
+
+1. `stack install ghc-mod` (you can get `stack` from Haskell installation)
+
+2. add `let $PATH .= (":" . $HOME . "/.stack/bin" . ":" . $HOME . "/.local/bin")` on your `~/.vimrc`
 
 ## TODO
 
